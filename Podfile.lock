@@ -1,0 +1,21 @@
+PODS:
+  - PeakSDK (0.10.1)
+
+DEPENDENCIES:
+  - PeakSDK (from `git@bitbucket.org:nixsolutions/peaksdk.git`)
+
+EXTERNAL SOURCES:
+  PeakSDK:
+    :git: git@bitbucket.org:nixsolutions/peaksdk.git
+
+CHECKOUT OPTIONS:
+  PeakSDK:
+    :commit: ba011683b466a29acf2fc5b9455880a21b91c566
+    :git: git@bitbucket.org:nixsolutions/peaksdk.git
+
+SPEC CHECKSUMS:
+  PeakSDK: c84eb5ae4d153fdd0733b48bf01080509f952ffd
+
+PODFILE CHECKSUM: 2930f31df2528336ff3b8de03bbbdeeb57d653dd
+
+COCOAPODS: 1.0.1

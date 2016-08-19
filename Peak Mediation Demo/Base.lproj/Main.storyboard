@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muE-Ln-ynu" userLabel="Bar">
+                                <rect key="frame" x="0.0" y="28" width="600" height="69"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0T-cg-wgF">
+                                        <rect key="frame" x="8" y="20" width="56" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JYy-54-jBt"/>
+                                            <constraint firstAttribute="width" constant="56" id="Nbq-Cs-6uV"/>
+                                        </constraints>
+                                        <state key="normal" title="Banner"/>
+                                        <connections>
+                                            <action selector="showBannerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAp-Qo-Rjf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6X-sr-tNa">
+                                        <rect key="frame" x="260" y="20" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dQ5-4x-bce"/>
+                                            <constraint firstAttribute="width" constant="80" id="irp-co-GAi"/>
+                                        </constraints>
+                                        <state key="normal" title="Interstitial"/>
+                                        <connections>
+                                            <action selector="showInterstitialAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="me1-mt-Vde"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22o-3A-QsT">
+                                        <rect key="frame" x="512" y="20" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Yj7-S0-pZP"/>
+                                            <constraint firstAttribute="width" constant="80" id="oFp-xp-Vxk"/>
+                                        </constraints>
+                                        <state key="normal" title="Native"/>
+                                        <connections>
+                                            <action selector="showNativeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9f-k1-XqF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="22o-3A-QsT" secondAttribute="trailing" constant="8" id="5Iv-es-ZLN"/>
+                                    <constraint firstItem="k6X-sr-tNa" firstAttribute="centerY" secondItem="muE-Ln-ynu" secondAttribute="centerY" id="9Ff-Gy-fQQ"/>
+                                    <constraint firstItem="k6X-sr-tNa" firstAttribute="centerX" secondItem="muE-Ln-ynu" secondAttribute="centerX" id="QPW-Jh-olV"/>
+                                    <constraint firstItem="A0T-cg-wgF" firstAttribute="leading" secondItem="muE-Ln-ynu" secondAttribute="leading" constant="8" id="UJK-UZ-rXL"/>
+                                    <constraint firstItem="A0T-cg-wgF" firstAttribute="centerY" secondItem="muE-Ln-ynu" secondAttribute="centerY" id="gMP-kH-08A"/>
+                                    <constraint firstItem="22o-3A-QsT" firstAttribute="centerY" secondItem="muE-Ln-ynu" secondAttribute="centerY" id="tm8-wG-H4t"/>
+                                    <constraint firstAttribute="height" constant="69" id="yds-gf-JRA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6o-CF-RGm" userLabel="Space">
+                                <rect key="frame" x="0.0" y="97" width="600" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f6o-CF-RGm" firstAttribute="top" secondItem="muE-Ln-ynu" secondAttribute="bottom" id="2bE-fm-7s8"/>
+                            <constraint firstAttribute="trailing" secondItem="f6o-CF-RGm" secondAttribute="trailing" id="MJH-VJ-2aN"/>
+                            <constraint firstItem="muE-Ln-ynu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MfW-0D-OUX"/>
+                            <constraint firstAttribute="bottom" secondItem="f6o-CF-RGm" secondAttribute="bottom" id="Nnr-12-vuh"/>
+                            <constraint firstAttribute="trailing" secondItem="muE-Ln-ynu" secondAttribute="trailing" id="Scn-fT-Fgf"/>
+                            <constraint firstItem="muE-Ln-ynu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="28" id="ado-1U-wEN"/>
+                            <constraint firstItem="f6o-CF-RGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j14-Qj-I4o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adSpaceView" destination="f6o-CF-RGm" id="xSJ-rJ-KGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+</document>
