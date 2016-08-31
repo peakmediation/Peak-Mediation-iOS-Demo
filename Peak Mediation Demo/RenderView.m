@@ -13,6 +13,7 @@
 
 @property(strong, nonatomic) UILabel *title;
 @property(strong, nonatomic) UILabel *text;
+@property(strong, nonatomic) UILabel *sponsored;
 @property(strong, nonatomic) UIImageView *icon;
 @property(strong, nonatomic) UIImageView *mainImage;
 @property(strong, nonatomic) UIButton *privacyAction;
@@ -72,6 +73,14 @@
     [_title setNumberOfLines:0];
     [_title setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:_title];
+    
+    _sponsored = [UILabel new];
+    [_sponsored setFont:[UIFont systemFontOfSize:12.f]];
+    [_sponsored setNumberOfLines:0];
+    [_sponsored setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_sponsored setText:@"Sponsored"];
+    [_sponsored setTextColor:[UIColor darkGrayColor]];
+    [self addSubview:_sponsored];
     
     _icon = [UIImageView new];
     [_icon setBackgroundColor:[UIColor grayColor]];
@@ -137,6 +146,21 @@
                          multiplier:1.0
                          constant:0]];
     
+    [self addConstraints:[NSLayoutConstraint
+                          constraintsWithVisualFormat:@"V:[_sponsored(==iconHeight)]"
+                          options:NSLayoutFormatDirectionLeadingToTrailing
+                          metrics:@{@"iconHeight" : @(iconHeight)}
+                          views:NSDictionaryOfVariableBindings(_sponsored)]];
+    
+    [self addConstraint:[NSLayoutConstraint
+                         constraintWithItem:_sponsored
+                         attribute:NSLayoutAttributeTop
+                         relatedBy:NSLayoutRelationEqual
+                         toItem:_title
+                         attribute:NSLayoutAttributeTop
+                         multiplier:1.0
+                         constant:0]];
+    
     [self addConstraint:[NSLayoutConstraint
                          constraintWithItem:_action
                          attribute:NSLayoutAttributeBottom
@@ -175,6 +199,7 @@
     static const CGFloat iconAndTitleHorizontalOffset = 8.f;
     static const CGFloat privacyActionWidth = 30.f;
     static const CGFloat privacyActionAndActionHorizontalOffset = 8.f;
+    static const CGFloat sponsoredWidth = 70.f;
     
     [self addConstraint:[NSLayoutConstraint
                          constraintWithItem:_close
@@ -186,11 +211,12 @@
                          constant:0]];
     
     [self addConstraints:[NSLayoutConstraint
-                          constraintsWithVisualFormat:@"H:|-[_icon(==iconWidth)]-iconAndTitleHorizontalOffset-[_title]-|"
+                          constraintsWithVisualFormat:@"H:|-[_icon(==iconWidth)]-iconAndTitleHorizontalOffset-[_title]-[_sponsored(==sponsoredWidth)]-|"
                           options:NSLayoutFormatDirectionLeadingToTrailing
                           metrics:@{@"iconWidth" : @(iconWidth),
-                                    @"iconAndTitleHorizontalOffset" : @(iconAndTitleHorizontalOffset)}
-                          views:NSDictionaryOfVariableBindings(_icon, _title)]];
+                                    @"iconAndTitleHorizontalOffset" : @(iconAndTitleHorizontalOffset),
+                                    @"sponsoredWidth" : @(sponsoredWidth)}
+                          views:NSDictionaryOfVariableBindings(_icon, _title, _sponsored)]];
     
     [self addConstraints:[NSLayoutConstraint
                           constraintsWithVisualFormat:@"H:|-[_text]-|"
