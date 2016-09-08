@@ -1,21 +1,21 @@
 PODS:
-  - PeakSDK (0.10.1)
+  - PeakSDK (0.12.0)
 
 DEPENDENCIES:
-  - PeakSDK (from `git@bitbucket.org:nixsolutions/peaksdk.git`)
+  - PeakSDK (from `https://github.com/peakmediation/Peak-Mediation-iOS-SDK.git`)
 
 EXTERNAL SOURCES:
   PeakSDK:
-    :git: git@bitbucket.org:nixsolutions/peaksdk.git
+    :git: https://github.com/peakmediation/Peak-Mediation-iOS-SDK.git
 
 CHECKOUT OPTIONS:
   PeakSDK:
-    :commit: ba011683b466a29acf2fc5b9455880a21b91c566
-    :git: git@bitbucket.org:nixsolutions/peaksdk.git
+    :commit: d41ddcc55bdf3679e639511649ebc231ee9b8792
+    :git: https://github.com/peakmediation/Peak-Mediation-iOS-SDK.git
 
 SPEC CHECKSUMS:
-  PeakSDK: c84eb5ae4d153fdd0733b48bf01080509f952ffd
+  PeakSDK: d7d33b320d41a7171ce961d394c56b15609edf16
 
-PODFILE CHECKSUM: 2930f31df2528336ff3b8de03bbbdeeb57d653dd
+PODFILE CHECKSUM: 7a662fb2284f3f2794a6cd2bbff18c09b57a125d
 
 COCOAPODS: 1.0.1

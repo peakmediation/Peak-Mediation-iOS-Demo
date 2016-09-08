@@ -16,6 +16,7 @@
 @property (nonatomic, weak) IBOutlet UIView *adSpaceView;
 @property (nonatomic, strong) UIView *bannerView;
 @property (nonatomic, strong) RenderView *renderView;
+@property (nonatomic, strong) PeakAsyncAdRequest *asyncRequest;
 
 @end
 
@@ -26,6 +27,22 @@ static NSString * const NativeZoneID = @"78093";
 @implementation ViewController
 
 #pragma mark - Actions
+
+- (IBAction)AsyncAdRequestAction:(id)sender
+{
+    PeakAsyncAdRequest *asyncRequest = [[PeakSDK sharedInstance] asyncAdRequestForZone:InterstitialZoneID];
+    [self setAsyncRequest:asyncRequest];
+    
+    [asyncRequest start:^(NSString *zone)
+    {
+        [[PeakSDK sharedInstance] showInterstitialForZone:zone];
+    }];
+}
+
+- (IBAction)CancelRequestAction:(id)sender
+{
+    [[self asyncRequest] cancel];
+}
 
 - (IBAction)showBannerAction:(id)sender
 {
