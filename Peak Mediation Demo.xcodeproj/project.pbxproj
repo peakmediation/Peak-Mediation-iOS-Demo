@@ -14,6 +14,7 @@
 		995FE59C1D620C7900AA33E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995FE59B1D620C7900AA33E1 /* Assets.xcassets */; };
 		995FE59F1D620C7900AA33E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995FE59D1D620C7900AA33E1 /* LaunchScreen.storyboard */; };
 		995FE5A81D6232BA00AA33E1 /* RenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 995FE5A71D6232BA00AA33E1 /* RenderView.m */; };
+		9977227A1DD6298C00DF148E /* PeakDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997722791DD6298C00DF148E /* PeakDelegate.m */; };
 		E2A6F83FB1A8377428F31909 /* libPods-Peak Mediation Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6256DC370391219E35E55B8C /* libPods-Peak Mediation Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,8 @@
 		995FE5A01D620C7900AA33E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		995FE5A61D6232BA00AA33E1 /* RenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderView.h; sourceTree = "<group>"; };
 		995FE5A71D6232BA00AA33E1 /* RenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderView.m; sourceTree = "<group>"; };
+		997722781DD6298C00DF148E /* PeakDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakDelegate.h; sourceTree = "<group>"; };
+		997722791DD6298C00DF148E /* PeakDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeakDelegate.m; sourceTree = "<group>"; };
 		CC5D5D05D145CD46E6DCE750 /* Pods-Peak Mediation Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peak Mediation Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peak Mediation Demo/Pods-Peak Mediation Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E5A2F6474227D09665553D /* Pods-Peak Mediation Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peak Mediation Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peak Mediation Demo/Pods-Peak Mediation Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +85,8 @@
 				995FE5961D620C7900AA33E1 /* ViewController.m */,
 				995FE5A61D6232BA00AA33E1 /* RenderView.h */,
 				995FE5A71D6232BA00AA33E1 /* RenderView.m */,
+				997722781DD6298C00DF148E /* PeakDelegate.h */,
+				997722791DD6298C00DF148E /* PeakDelegate.m */,
 				995FE5981D620C7900AA33E1 /* Main.storyboard */,
 				995FE59B1D620C7900AA33E1 /* Assets.xcassets */,
 				995FE59D1D620C7900AA33E1 /* LaunchScreen.storyboard */,
@@ -142,6 +147,7 @@
 				TargetAttributes = {
 					995FE58B1D620C7900AA33E1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YQ63ZZYZV7;
 					};
 				};
 			};
@@ -231,6 +237,7 @@
 			files = (
 				995FE5971D620C7900AA33E1 /* ViewController.m in Sources */,
 				995FE5941D620C7900AA33E1 /* AppDelegate.m in Sources */,
+				9977227A1DD6298C00DF148E /* PeakDelegate.m in Sources */,
 				995FE5A81D6232BA00AA33E1 /* RenderView.m in Sources */,
 				995FE5911D620C7900AA33E1 /* main.m in Sources */,
 			);
@@ -279,6 +286,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -324,6 +332,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -347,6 +356,7 @@
 			baseConfigurationReference = CC5D5D05D145CD46E6DCE750 /* Pods-Peak Mediation Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YQ63ZZYZV7;
 				INFOPLIST_FILE = "Peak Mediation Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -360,6 +370,7 @@
 			baseConfigurationReference = D8E5A2F6474227D09665553D /* Pods-Peak Mediation Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YQ63ZZYZV7;
 				INFOPLIST_FILE = "Peak Mediation Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

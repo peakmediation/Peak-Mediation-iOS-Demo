@@ -10,8 +10,9 @@
 #import <PeakSDK/PeakSDK.h>
 #import <PeakSDK/PeakNativeAd.h>
 #import "RenderView.h"
+#import "PeakDelegate.h"
 
-@interface ViewController () <PeakSDKDelegate>
+@interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIView *adSpaceView;
 @property (nonatomic, strong) UIView *bannerView;
@@ -74,7 +75,8 @@ static NSString * const NativeZoneID = @"78093";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[PeakSDK sharedInstance] setDelegate:self];
+    [[PeakSDK sharedInstance] setDelegate:[[PeakDelegate alloc] initWithPresenterViewController:self]];
+    [[PeakSDK sharedInstance] setLogLevel:PKLoggingLevelRelease];
 }
 
 #pragma mark - Private methods

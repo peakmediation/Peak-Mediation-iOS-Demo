@@ -1,5 +1,5 @@
 PODS:
-  - PeakSDK (0.12.0)
+  - PeakSDK (0.15.0)
 
 DEPENDENCIES:
   - PeakSDK (from `https://github.com/peakmediation/Peak-Mediation-iOS-SDK.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PeakSDK:
-    :commit: d41ddcc55bdf3679e639511649ebc231ee9b8792
+    :commit: c1ac58972e28ceed731d45f09ba2b0ce98b9ca7c
     :git: https://github.com/peakmediation/Peak-Mediation-iOS-SDK.git
 
 SPEC CHECKSUMS:
-  PeakSDK: d7d33b320d41a7171ce961d394c56b15609edf16
+  PeakSDK: 4c7950c9f2bc7417f396440313a6203a6593a2da
 
 PODFILE CHECKSUM: 7a662fb2284f3f2794a6cd2bbff18c09b57a125d
 
