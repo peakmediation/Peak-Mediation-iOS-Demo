@@ -14,12 +14,16 @@
 @end
 
 static NSString * const PeakAppID = @"e2768f95b86df8bd";
+static NSUInteger const UserAge = 21;
+static PKTargetGender const UserGender = PKTargetGenderMale;
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[PeakSDK sharedInstance] setTargetingAge:UserAge];
+    [[PeakSDK sharedInstance] setTargetingGender:UserGender];
     [[PeakSDK sharedInstance] configureWithAppId:PeakAppID];
     return YES;
 }

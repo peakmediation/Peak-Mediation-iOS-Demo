@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Peak Mediation Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
